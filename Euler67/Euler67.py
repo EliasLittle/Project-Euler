@@ -1,10 +1,10 @@
-triangle = open(r'/Users/EliasLittle/Documents/Project-Euler/Euler67/Euler67.txt')
+triangle = open('Euler67.txt','r')
 stringArr = [line.split() for line in triangle]
 
 arr = [map(int, x) for x in stringArr]
 
 def max(a,b):
-    return a if a >b else b
+    return a if a > b else b
 
 def solver(x):
     for i in range(0,len(arr[x])):
