@@ -1,17 +1,14 @@
-from math import factorial as f
+from math import factorial as fact
 
+def biCoeff(n,k):
+	return int(fact(n)/(fact(k)*fact(n-k)))
+	
+vals = []
 
-def nCr(n, r):
-    return f(n)/(f(r)*f(n-r))
-
-
-out = 0
-for n in range(1, 101):
-    for r in range(1, n):
-        if nCr(n, r) > 1000000:
-            out += n-r+1
-            break
-    else:
-        continue
-
-print(out)
+for n in range(23,101):
+	for k in range(1,n+1):
+		v = biCoeff(n,k)
+		if v > 1000000:
+			vals.append(v)
+			
+print(len(vals))
