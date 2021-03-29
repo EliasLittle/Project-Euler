@@ -1,4 +1,5 @@
-#UNSOLVED... :(
+#SOLVED IN Euler66.jl with JULIA
+#UNSOLVED IN PYTHON... :(
 from math import sqrt
 import time
 
